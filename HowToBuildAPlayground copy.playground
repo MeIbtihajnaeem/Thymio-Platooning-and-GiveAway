@@ -1,0 +1,45 @@
+<!DOCTYPE aseba-playground>
+<!--Beginning of Playground definition-->
+<aseba-playground>
+	<color name="black" r="0" g="0" b="0" />
+	<color name="red" r="32" g="0" b="0" />
+  	<world w="200" h="164" color="white" color="white" groundTexture="imgPlay.png" /> 
+	<camera x="50" y="50" altitude="250" yaw=" 1.57" pitch="-1.56" />
+
+
+<!--	<wall x="15" y="00" l1="15" l2="2.00" h="10.00" color="black" angle="0" />
+	<wall x="140" y="50" l1="15" l2="2.00" h="10.00" color="black" angle="4.8" />
+	<wall  x="80" y="104"l1="15" l2="2.00" h="10.00" color="black" angle="0" />
+
+	<wall x="75.00" y="65.00" l1="15" l2="2.00" h="10.00" color="white" angle="2.356" />
+	<wall x="65.00" y="55.00" l1="15" l2="2.00" h="10.00" color="white" angle="2.356" />
+	<wall x="75.00" y="55.00" l1="15" l2="2.00" h="10.00" color="white" angle="-2.356" />
+	-->
+
+
+
+	<robot type="thymio2" x="10" y="85" port="" angle="0" name="T1" nodeId="1"/>
+    <robot type="thymio2" x="55" y="10" port="" angle="1.0" name="T2" nodeId="2"/>
+    <robot type="thymio2" x="152" y="10" port="" angle="1.8" name="T3" nodeId="3"/>
+    <robot type="thymio2" x="95" y="155" port="" angle="-1.57" name="T5" nodeId="4"/>
+    <robot type="thymio2" x="185" y="105" port="" angle="3.15" name="T4" nodeId="5"/>
+
+	
+
+	<cylinder x="110" y="155" r="2.00" h="10.00" color="red" />
+	<cylinder x="126" y="155" r="2.00" h="10.00" color="red"/>	
+	
+
+
+	<cylinder x="23" y="14" r="2.00" h="10.00" color="red"/>
+	<cylinder x="38" y="9" r="2.00" h="10.00" color="red" />
+
+	<cylinder x="185" y="88" r="2.00" h="10.00" color="red" />
+	<cylinder x="185" y="70" r="2.00" h="10.00" color="red"/>
+
+
+
+
+
+<!--End of Playground definition-->
+</aseba-playground>

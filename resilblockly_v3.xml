@@ -1,0 +1,1696 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="environment$s" id="1683" x="-2603" y="-3549">
+    <field name="name">Crossroad</field>
+    <field name="#situation_assessment">+</field>
+    <field name="#action">+</field>
+    <field name="#entity">+</field>
+    <field name="#state_variable">+</field>
+    <field name="#state_variable">+</field>
+    <field name="#system">+</field>
+    <field name="#evolution">+</field>
+    <statement name="has:entity">
+      <block type="thing$s" id="1447" collapsed="true">
+        <field name="name">Road</field>
+        <field name="#dynamicity">+</field>
+        <next>
+          <block type="thing$s" id="1724" collapsed="true">
+            <field name="name">Walls</field>
+            <field name="#dynamicity">+</field>
+            <next>
+              <block type="thing$s" id="1687" collapsed="true">
+                <field name="name">Cylinders</field>
+                <field name="#dynamicity">+</field>
+                <next>
+                  <block type="thing$s" id="1726" collapsed="true">
+                    <field name="name">Road Markings</field>
+                    <field name="#dynamicity">+</field>
+                    <next>
+                      <block type="thing$s" id="821" collapsed="true">
+                        <field name="name">Moving Obstacle</field>
+                        <field name="#dynamicity">+</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="requirements" id="1411" x="-1879" y="-3535">
+    <statement name="Architecture_requirements">
+      <block type="composite_requirement" id="1722">
+        <field name="req_id">ENV-01</field>
+        <field name="title">Some requirements on Environments:</field>
+        <statement name="r">
+          <block type="simple_requirement" id="1692">
+            <field name="req_id">REQ-EVN-01</field>
+            <field name="title">All Thymios should operate in a space of at least 140x140 cm Environment</field>
+            <next>
+              <block type="simple_requirement" id="1704">
+                <field name="req_id">REQ-EVN-02</field>
+                <field name="title">The surface shall be smooth, flat, and free from any unnecessary obstacles</field>
+                <next>
+                  <block type="simple_requirement" id="1698">
+                    <field name="req_id">REQ-EVN-03</field>
+                    <field name="title">All The 5 two-ways road must be represented by a black line.</field>
+                    <next>
+                      <block type="simple_requirement" id="1716">
+                        <field name="req_id">REQ-EVN-04</field>
+                        <field name="title">Cylinders must show the destination</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="composite_requirement" id="1720">
+            <field name="req_id">SOS-01</field>
+            <field name="title">SoS structure and rules:</field>
+            <statement name="r">
+              <block type="simple_requirement" id="1702">
+                <field name="req_id">REQ-SOS-01</field>
+                <field name="title">The SoS shall be composed of 5 Thymios</field>
+                <next>
+                  <block type="simple_requirement" id="1700">
+                    <field name="req_id">REQ-SOS-02</field>
+                    <field name="title">At SoS starts, the Thymios shall be positioned at every entry road must be occupied by one thymio</field>
+                    <next>
+                      <block type="simple_requirement" id="1706">
+                        <field name="req_id">REQ-SOS-03</field>
+                        <field name="title">At the beginning of every entry road must be occupied by one thymio</field>
+                        <next>
+                          <block type="simple_requirement" id="1708">
+                            <field name="req_id">REQ-SOS-04</field>
+                            <field name="title">The SoS target shall be when all Thymios reach their respective destinations without any collision and error</field>
+                            <next>
+                              <block type="simple_requirement" id="1710">
+                                <field name="req_id">REQ-SOS-05</field>
+                                <field name="title">The execution shall complete when all thymios reach their destination</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="composite_requirement" id="330">
+                <field name="req_id">TYM-01</field>
+                <field name="title">Thymio Specification and Rules:</field>
+                <statement name="r">
+                  <block type="simple_requirement" id="332">
+                    <field name="req_id">REQ-TYM-01</field>
+                    <field name="title">Each Thymio shall have hardcoded the following information: Unique identifier, Group information, Sensor and actuator configurations, path, position, destination,</field>
+                    <next>
+                      <block type="simple_requirement" id="334">
+                        <field name="req_id">REQ-TYM-02</field>
+                        <field name="title">Thymio must be able to estimate the distance from other Thymio from the environment with the help of 5 front Proximity sensor</field>
+                        <next>
+                          <block type="simple_requirement" id="336">
+                            <field name="req_id">REQ-TYM-03</field>
+                            <field name="title">Thymio must be able to estimate the relative distance from the wall of the environment with the help of 2 back Proximity sensors</field>
+                            <next>
+                              <block type="simple_requirement" id="338">
+                                <field name="req_id">REQ-TYM-04</field>
+                                <field name="title">Each Thymio must be able to reach its destination without collision and violation of regulation</field>
+                                <next>
+                                  <block type="simple_requirement" id="342">
+                                    <field name="req_id">REQ-TYM-05</field>
+                                    <field name="title">Each state of the thymio must show different colours the thymio</field>
+                                    <next>
+                                      <block type="simple_requirement" id="340">
+                                        <field name="req_id">REQ-TYM-06</field>
+                                        <field name="title">Thymio may operate in one of at least six states. i.e Forward, Reverse, left, right, stop, finished and sleep</field>
+                                        <next>
+                                          <block type="simple_requirement" id="376">
+                                            <field name="req_id">REQ-TYM-07</field>
+                                            <field name="title">Thymio should receive a signal to start</field>
+                                            <next>
+                                              <block type="simple_requirement" id="378">
+                                                <field name="req_id">REQ-TYM-08</field>
+                                                <field name="title">A Thymio shall operate to a black line</field>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="Communication_requirements">
+      <block type="composite_requirement" id="380">
+        <field name="req_id">CCS-01</field>
+        <field name="title">Communication at CS-level:</field>
+        <statement name="r">
+          <block type="simple_requirement" id="382">
+            <field name="req_id">REQ-CCS-01</field>
+            <field name="title">Each Thymio must detect other obstacles using RUPI</field>
+          </block>
+        </statement>
+        <next>
+          <block type="composite_requirement" id="384">
+            <field name="req_id">CSOS-01</field>
+            <field name="title">Communication at SoS-level:</field>
+            <statement name="r">
+              <block type="simple_requirement" id="386">
+                <field name="req_id">REQ-CSOS-01</field>
+                <field name="title">All thymios must receive start command from SOS using RUMI before moving</field>
+                <next>
+                  <block type="simple_requirement" id="388">
+                    <field name="req_id">REQ-CSOS-02</field>
+                    <field name="title">Each Thymio must exchange priority using RUMI</field>
+                    <next>
+                      <block type="simple_requirement" id="390">
+                        <field name="req_id">REQ-CSOS-03</field>
+                        <field name="title">All thymios must be able to receive stop command from SOS using RUMI in an emergency situation</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="Dependability_requirements">
+      <block type="composite_requirement" id="1781">
+        <field name="req_id">DAVB-01</field>
+        <field name="title">Availability </field>
+        <statement name="r">
+          <block type="simple_requirement" id="1742">
+            <field name="req_id">REQ-DAVB-01</field>
+            <field name="title">All CS should be available and responsive at all times during its operation.</field>
+            <next>
+              <block type="simple_requirement" id="1744">
+                <field name="req_id">REQ-DAVB-02</field>
+                <field name="title">Thymio should be able to recover from any failure quickly and resume its operation</field>
+                <next>
+                  <block type="simple_requirement" id="1746">
+                    <field name="req_id">REQ-DAVB-03</field>
+                    <field name="title">Thymio should be able to reroute if, on the wrong path,</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="composite_requirement" id="1783">
+            <field name="req_id">DREP-01</field>
+            <field name="title">Reliability</field>
+            <statement name="r">
+              <block type="simple_requirement" id="1785">
+                <field name="req_id">REQ-DREP-01</field>
+                <field name="title">The communication between each Thymio and with SOS must be reliable</field>
+                <next>
+                  <block type="simple_requirement" id="1789">
+                    <field name="req_id">REQ-DREP-02</field>
+                    <field name="title">The system should be able to detect and handle any errors or failures that may occur in the Thymios' sensors, actuators, or communication modules.</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="composite_requirement" id="396">
+                <field name="req_id">DINT-01</field>
+                <field name="title">Integrity</field>
+                <statement name="r">
+                  <block type="simple_requirement" id="398">
+                    <field name="req_id">REQ-DINT-01</field>
+                    <field name="title">The system should ensure the accuracy and consistency of the data used for routing, obstacle detection, and emergency response.</field>
+                    <next>
+                      <block type="simple_requirement" id="400">
+                        <field name="req_id">REQ-DINT-02</field>
+                        <field name="title">The system must protect against any unauthorized access or modification of the system's data or functionality</field>
+                        <next>
+                          <block type="simple_requirement" id="402">
+                            <field name="req_id">REQ-DINT-03</field>
+                            <field name="title">The Aseba switch must be protected against any unauthorized access or modification of the system's data or functionality</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="composite_requirement" id="404">
+                    <field name="req_id">DSFT-01</field>
+                    <field name="title">Safety</field>
+                    <statement name="r">
+                      <block type="simple_requirement" id="406">
+                        <field name="req_id">REQ-DSFT-01</field>
+                        <field name="title">The Thymios should be able to detect any potential obstacles in their environment and take appropriate actions to avoid them.</field>
+                        <next>
+                          <block type="simple_requirement" id="408">
+                            <field name="req_id">REQ-DSFT-02</field>
+                            <field name="title">The system should ensure that the Thymios follow their pre-planned route without colliding with each other or walls.</field>
+                            <next>
+                              <block type="simple_requirement" id="410">
+                                <field name="req_id">REQ-DSFT-03</field>
+                                <field name="title">The Thymios should be able to respond to emergency situations, such as sudden stops or swerving, to prevent accidents and injuries.</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="Dynamicity_requirements">
+      <block type="simple_requirement" id="1791">
+        <field name="req_id">REQ-DYN-01</field>
+        <field name="title">A thymio moving on the wrong path may be able to reroute on correct path</field>
+        <next>
+          <block type="simple_requirement" id="392">
+            <field name="req_id">REQ-DYN-02</field>
+            <field name="title">Thymio must be able to react to each other's proximity to avoid collisions while following their planned routes</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="Security_requirements">
+      <block type="simple_requirement" id="412">
+        <field name="req_id">REQ-SEC-01</field>
+        <field name="title">Thymio must authenticate itself before joining the network</field>
+        <next>
+          <block type="simple_requirement" id="414">
+            <field name="req_id">REQ-SEC-02</field>
+            <field name="title">All communication between the Thymio robots and the control system must be encrypted to prevent unauthorized access or interception of sensitive information</field>
+            <next>
+              <block type="simple_requirement" id="416">
+                <field name="req_id">REQ-SEC-03</field>
+                <field name="title">The Thymio robots must store their sensitive information, such as their unique identifier and authentication tokens, in a secure and encrypted manner.</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="Time_requirements">
+      <block type="simple_requirement" id="1793">
+        <field name="req_id">REQ-T-01</field>
+        <field name="title">Thymios shall measure time according to a local clock, whose resolution is the kilotick (1/32 of second)</field>
+        <next>
+          <block type="simple_requirement" id="394">
+            <field name="req_id">REQ-T-02</field>
+            <field name="title">Must have a shared reference clock to synchronize the local clocks of all Thymios.</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="SoS$s" id="71" x="-415" y="-3540">
+    <field name="name">Thymio Platooning and GiveAway</field>
+    <field name="sos_type">collaborative</field>
+    <field name="#system">+</field>
+    <field name="#evolution">+</field>
+    <field name="#dependability_guarantee">+</field>
+    <field name="#behaviour">+</field>
+    <field name="#security">+</field>
+    <statement name="is_composed_of:system">
+      <block type="CS$s" id="72">
+        <field name="cardinality">1</field>
+        <field name="name">T1</field>
+        <field name="system_type">autonomous</field>
+        <field name="#boundary">+</field>
+        <field name="#state_space">+</field>
+        <field name="#HMI">+</field>
+        <field name="#CPS">+</field>
+        <field name="#service">+</field>
+        <field name="#role_player">+</field>
+        <field name="#physical_system">+</field>
+        <field name="#RUI">+</field>
+        <field name="#dependability_guarantee">+</field>
+        <field name="#fault_containment_region">+</field>
+        <field name="#MAPE_algorithm">+</field>
+        <field name="#security">+</field>
+        <field name="#clock">+</field>
+        <field name="#system_resource">+</field>
+        <field name="#architectural_style">+</field>
+        <field name="#subsystem">+</field>
+        <field name="#state_variable">+</field>
+        <field name="#interface">+</field>
+        <field name="#dynamicity">+</field>
+        <statement name="has_a:boundary">
+          <block type="__link" id="417">
+            <field name="link_to">Boundary / Proximity sensor value of 3000</field>
+            <data>boundary : 77 : 1</data>
+          </block>
+        </statement>
+        <statement name="has_a:state_space">
+          <block type="state_space$i" id="78">
+            <field name="name">Motions</field>
+            <field name="#state">+</field>
+            <statement name="has:state">
+              <block type="state$s" id="79">
+                <field name="name">Stop</field>
+                <next>
+                  <block type="state$s" id="81">
+                    <field name="name">Sleep</field>
+                    <next>
+                      <block type="state$s" id="82">
+                        <field name="name">Forward</field>
+                        <next>
+                          <block type="state$s" id="83">
+                            <field name="name">Reverse</field>
+                            <next>
+                              <block type="state$s" id="84">
+                                <field name="name">Left</field>
+                                <next>
+                                  <block type="state$s" id="85">
+                                    <field name="name">Right</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <statement name="provides:service">
+          <block type="service$s" id="428" collapsed="true">
+            <field name="name">Slow Down When Detect any Obstacle </field>
+            <field name="#state_variable">+</field>
+            <next>
+              <block type="service$s" id="429" collapsed="true">
+                <field name="name">Change path when detect stationary thymio or wall</field>
+                <field name="#state_variable">+</field>
+                <next>
+                  <block type="service$s" id="430" collapsed="true">
+                    <field name="name">Stop when detect cylinders </field>
+                    <field name="#state_variable">+</field>
+                    <next>
+                      <block type="service$s" id="431" collapsed="true">
+                        <field name="name">Follow Thymio in front if it is not facing the same direction, and unfollow until the path separates. Stop when it stops and start when it restarts.</field>
+                        <field name="#state_variable">+</field>
+                        <next>
+                          <block type="service$s" id="432" collapsed="true">
+                            <field name="name">Stop and wait till cross the thymio in front if it has higher priority and facing opposite direction</field>
+                            <field name="#state_variable">+</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="interacts_with:role_player">
+          <block type="role_player$s" id="94">
+            <field name="cardinality">1</field>
+            <field name="name">Human Tap</field>
+          </block>
+        </statement>
+        <statement name="is_composed_of:physical_system">
+          <block type="controlled_object$s" id="95">
+            <field name="cardinality">1</field>
+            <field name="name">Proximity Sensor</field>
+            <next>
+              <block type="controlled_object$s" id="96">
+                <field name="cardinality">2</field>
+                <field name="name">Ground Sensor</field>
+                <next>
+                  <block type="controlled_object$s" id="97">
+                    <field name="cardinality">3</field>
+                    <field name="name">Motors</field>
+                    <next>
+                      <block type="controlled_object$s" id="98">
+                        <field name="cardinality">4</field>
+                        <field name="name">Buttons</field>
+                        <next>
+                          <block type="controlled_object$s" id="99">
+                            <field name="cardinality">5</field>
+                            <field name="name">LEDs</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="has:RUI">
+          <block type="RUPI$s" id="101">
+            <field name="name">Proximity Sensor</field>
+            <field name="has_connection">FALSE</field>
+            <field name="#connecting_strategy">+</field>
+            <field name="#interface_specification">+</field>
+            <field name="#interface_port">+</field>
+            <field name="#afferent_environment">+</field>
+            <field name="#efferent_environment">+</field>
+            <field name="#interface_model">+</field>
+            <field name="#thing">+</field>
+            <field name="#environment">+</field>
+            <field name="#RUPI">+</field>
+            <field name="#probe">+</field>
+            <field name="#security">+</field>
+            <statement name="tranports:thing">
+              <block type="__link" id="104">
+                <field name="link_to">Thing / Walls</field>
+                <data>thing : 1724 : 0</data>
+                <next>
+                  <block type="__link" id="105">
+                    <field name="link_to">Thing / Cylinders</field>
+                    <data>thing : 1687 : 0</data>
+                    <next>
+                      <block type="__link" id="822">
+                        <field name="link_to">Thing / Moving Obstacle</field>
+                        <data>thing : 821 : 0</data>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="affects:environment">
+              <block type="__link" id="103">
+                <field name="link_to">Environment / Crossroad</field>
+                <data>environment : 1683 : 0</data>
+              </block>
+            </statement>
+            <next>
+              <block type="__link" id="519">
+                <field name="link_to">RUMI / Asebq Switch</field>
+                <data>RUMI : 473 : 0</data>
+                <next>
+                  <block type="RUPI$s" id="823">
+                    <field name="name">Ground Sensor</field>
+                    <field name="has_connection">FALSE</field>
+                    <field name="#connecting_strategy">+</field>
+                    <field name="#interface_specification">+</field>
+                    <field name="#interface_port">+</field>
+                    <field name="#afferent_environment">+</field>
+                    <field name="#efferent_environment">+</field>
+                    <field name="#interface_model">+</field>
+                    <field name="#thing">+</field>
+                    <field name="#environment">+</field>
+                    <field name="#RUPI">+</field>
+                    <field name="#probe">+</field>
+                    <field name="#security">+</field>
+                    <statement name="tranports:thing">
+                      <block type="__link" id="825">
+                        <field name="link_to">Thing / Road</field>
+                        <data>thing : 1447 : 0</data>
+                        <next>
+                          <block type="__link" id="826">
+                            <field name="link_to">Thing / Road Markings</field>
+                            <data>thing : 1726 : 0</data>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="affects:environment">
+                      <block type="__link" id="824">
+                        <field name="link_to">Environment / Crossroad</field>
+                        <data>environment : 1683 : 0</data>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="shares:clock">
+          <block type="physical_clock$s" id="476" collapsed="true">
+            <field name="name">clock, whose resolution is the kilotick (1/32 of second)</field>
+            <field name="tick">day</field>
+            <field name="offset">day</field>
+            <field name="frequency_offset">  ?  </field>
+            <field name="stability">  ?  </field>
+            <field name="wander">  ?  </field>
+            <field name="jitter">  ?  </field>
+            <field name="granularity">  ?  </field>
+            <field name="#drift">+</field>
+            <field name="#accuracy">+</field>
+            <field name="#instant">+</field>
+            <field name="#external_sync">+</field>
+            <field name="#internal_sync">+</field>
+            <field name="#oscillator">+</field>
+            <next>
+              <block type="__link" id="510">
+                <field name="link_to">Reference clock / Must have a shared reference clock to synchronize the local clocks of all Thymios.</field>
+                <data>reference_clock : 509 : 0</data>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="has:state_variable">
+          <block type="state_variable$s" id="115" collapsed="true">
+            <field name="name">Values of motors</field>
+            <field name="value">  ?  </field>
+            <field name="#state">+</field>
+            <next>
+              <block type="state_variable$s" id="116" collapsed="true">
+                <field name="name">Timer</field>
+                <field name="value">  ?  </field>
+                <field name="#state">+</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="provides:interface">
+          <block type="__link" id="117">
+            <field name="link_to">RUPI / Proximity Sensor</field>
+            <data>RUPI : 101 : 0</data>
+          </block>
+        </statement>
+        <statement name="has:dynamicity">
+          <block type="dynamic_interaction$s" id="118" collapsed="true">
+            <field name="name">A thymio moving on the wrong path may be able to reroute on correct path</field>
+            <field name="#interaction">+</field>
+          </block>
+        </statement>
+        <next>
+          <block type="CS$s" id="151">
+            <field name="cardinality">2</field>
+            <field name="name">T2</field>
+            <field name="system_type">autonomous</field>
+            <field name="#boundary">+</field>
+            <field name="#state_space">+</field>
+            <field name="#HMI">+</field>
+            <field name="#CPS">+</field>
+            <field name="#service">+</field>
+            <field name="#role_player">+</field>
+            <field name="#physical_system">+</field>
+            <field name="#RUI">+</field>
+            <field name="#dependability_guarantee">+</field>
+            <field name="#fault_containment_region">+</field>
+            <field name="#MAPE_algorithm">+</field>
+            <field name="#security">+</field>
+            <field name="#clock">+</field>
+            <field name="#system_resource">+</field>
+            <field name="#architectural_style">+</field>
+            <field name="#subsystem">+</field>
+            <field name="#state_variable">+</field>
+            <field name="#interface">+</field>
+            <field name="#dynamicity">+</field>
+            <statement name="has_a:boundary">
+              <block type="__link" id="418">
+                <field name="link_to">Boundary / Proximity sensor value of 3000</field>
+                <data>boundary : 77 : 1</data>
+              </block>
+            </statement>
+            <statement name="has_a:state_space">
+              <block type="state_space$i" id="153">
+                <field name="name">Motions</field>
+                <field name="#state">+</field>
+                <statement name="has:state">
+                  <block type="state$s" id="154">
+                    <field name="name">Stop</field>
+                    <next>
+                      <block type="state$s" id="155">
+                        <field name="name">Sleep</field>
+                        <next>
+                          <block type="state$s" id="156">
+                            <field name="name">Forward</field>
+                            <next>
+                              <block type="state$s" id="157">
+                                <field name="name">Reverse</field>
+                                <next>
+                                  <block type="state$s" id="158">
+                                    <field name="name">Left</field>
+                                    <next>
+                                      <block type="state$s" id="159">
+                                        <field name="name">Right</field>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+            <statement name="provides:service">
+              <block type="service$s" id="163" collapsed="true">
+                <field name="name">Slow Down When Detect any Obstacle </field>
+                <field name="#state_variable">+</field>
+                <next>
+                  <block type="service$s" id="164" collapsed="true">
+                    <field name="name">Change path when detect stationary thymio or wall</field>
+                    <field name="#state_variable">+</field>
+                    <next>
+                      <block type="service$s" id="165" collapsed="true">
+                        <field name="name">Stop when detect cylinders </field>
+                        <field name="#state_variable">+</field>
+                        <next>
+                          <block type="service$s" id="435" collapsed="true">
+                            <field name="name">Follow Thymio in front if it is not facing the same direction, and unfollow until the path separates. Stop when it stops and start when it restarts.</field>
+                            <field name="#state_variable">+</field>
+                            <next>
+                              <block type="service$s" id="436" collapsed="true">
+                                <field name="name">Stop and wait till cross the thymio in front if it has higher priority and facing opposite direction</field>
+                                <field name="#state_variable">+</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="interacts_with:role_player">
+              <block type="role_player$s" id="166">
+                <field name="cardinality">1</field>
+                <field name="name">Human Tap</field>
+              </block>
+            </statement>
+            <statement name="is_composed_of:physical_system">
+              <block type="controlled_object$s" id="167">
+                <field name="cardinality">1</field>
+                <field name="name">Proximity Sensor</field>
+                <next>
+                  <block type="controlled_object$s" id="168">
+                    <field name="cardinality">2</field>
+                    <field name="name">Ground Sensor</field>
+                    <next>
+                      <block type="controlled_object$s" id="169">
+                        <field name="cardinality">3</field>
+                        <field name="name">Motors</field>
+                        <next>
+                          <block type="controlled_object$s" id="170">
+                            <field name="cardinality">4</field>
+                            <field name="name">Buttons</field>
+                            <next>
+                              <block type="controlled_object$s" id="171">
+                                <field name="cardinality">5</field>
+                                <field name="name">LEDs</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="has:RUI">
+              <block type="RUPI$s" id="850">
+                <field name="name">Proximity Sensor</field>
+                <field name="has_connection">FALSE</field>
+                <field name="#connecting_strategy">+</field>
+                <field name="#interface_specification">+</field>
+                <field name="#interface_port">+</field>
+                <field name="#afferent_environment">+</field>
+                <field name="#efferent_environment">+</field>
+                <field name="#interface_model">+</field>
+                <field name="#thing">+</field>
+                <field name="#environment">+</field>
+                <field name="#RUPI">+</field>
+                <field name="#probe">+</field>
+                <field name="#security">+</field>
+                <statement name="tranports:thing">
+                  <block type="__link" id="851">
+                    <field name="link_to">Thing / Walls</field>
+                    <data>thing : 1724 : 0</data>
+                    <next>
+                      <block type="__link" id="852">
+                        <field name="link_to">Thing / Cylinders</field>
+                        <data>thing : 1687 : 0</data>
+                        <next>
+                          <block type="__link" id="853">
+                            <field name="link_to">Thing / Moving Obstacle</field>
+                            <data>thing : 821 : 0</data>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="affects:environment">
+                  <block type="__link" id="854">
+                    <field name="link_to">Environment / Crossroad</field>
+                    <data>environment : 1683 : 0</data>
+                  </block>
+                </statement>
+                <next>
+                  <block type="RUPI$s" id="859">
+                    <field name="name">Ground Sensor</field>
+                    <field name="has_connection">FALSE</field>
+                    <field name="#connecting_strategy">+</field>
+                    <field name="#interface_specification">+</field>
+                    <field name="#interface_port">+</field>
+                    <field name="#afferent_environment">+</field>
+                    <field name="#efferent_environment">+</field>
+                    <field name="#interface_model">+</field>
+                    <field name="#thing">+</field>
+                    <field name="#environment">+</field>
+                    <field name="#RUPI">+</field>
+                    <field name="#probe">+</field>
+                    <field name="#security">+</field>
+                    <statement name="tranports:thing">
+                      <block type="__link" id="860">
+                        <field name="link_to">Thing / Road</field>
+                        <data>thing : 1447 : 0</data>
+                        <next>
+                          <block type="__link" id="861">
+                            <field name="link_to">Thing / Road Markings</field>
+                            <data>thing : 1726 : 0</data>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="affects:environment">
+                      <block type="__link" id="862">
+                        <field name="link_to">Environment / Crossroad</field>
+                        <data>environment : 1683 : 0</data>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="__link" id="518">
+                        <field name="link_to">RUMI / Asebq Switch</field>
+                        <data>RUMI : 473 : 0</data>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="shares:clock">
+              <block type="physical_clock$s" id="477" collapsed="true">
+                <field name="name">clock, whose resolution is the kilotick (1/32 of second)</field>
+                <field name="tick">day</field>
+                <field name="offset">day</field>
+                <field name="frequency_offset">  ?  </field>
+                <field name="stability">  ?  </field>
+                <field name="wander">  ?  </field>
+                <field name="jitter">  ?  </field>
+                <field name="granularity">  ?  </field>
+                <field name="#drift">+</field>
+                <field name="#accuracy">+</field>
+                <field name="#instant">+</field>
+                <field name="#external_sync">+</field>
+                <field name="#internal_sync">+</field>
+                <field name="#oscillator">+</field>
+                <next>
+                  <block type="__link" id="511">
+                    <field name="link_to">Reference clock / Must have a shared reference clock to synchronize the local clocks of all Thymios.</field>
+                    <data>reference_clock : 509 : 0</data>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="has:state_variable">
+              <block type="state_variable$s" id="179" collapsed="true">
+                <field name="name">Values of motors</field>
+                <field name="value">  ?  </field>
+                <field name="#state">+</field>
+                <next>
+                  <block type="state_variable$s" id="180" collapsed="true">
+                    <field name="name">Timer</field>
+                    <field name="value">  ?  </field>
+                    <field name="#state">+</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="has:dynamicity">
+              <block type="dynamic_interaction$s" id="182" collapsed="true">
+                <field name="name">A thymio moving on the wrong path may be able to reroute on correct path</field>
+                <field name="#interaction">+</field>
+              </block>
+            </statement>
+            <next>
+              <block type="CS$s" id="216">
+                <field name="cardinality">3</field>
+                <field name="name">T3</field>
+                <field name="system_type">autonomous</field>
+                <field name="#boundary">+</field>
+                <field name="#state_space">+</field>
+                <field name="#HMI">+</field>
+                <field name="#CPS">+</field>
+                <field name="#service">+</field>
+                <field name="#role_player">+</field>
+                <field name="#physical_system">+</field>
+                <field name="#RUI">+</field>
+                <field name="#dependability_guarantee">+</field>
+                <field name="#fault_containment_region">+</field>
+                <field name="#MAPE_algorithm">+</field>
+                <field name="#security">+</field>
+                <field name="#clock">+</field>
+                <field name="#system_resource">+</field>
+                <field name="#architectural_style">+</field>
+                <field name="#subsystem">+</field>
+                <field name="#state_variable">+</field>
+                <field name="#interface">+</field>
+                <field name="#dynamicity">+</field>
+                <statement name="has_a:boundary">
+                  <block type="__link" id="419">
+                    <field name="link_to">Boundary / Proximity sensor value of 3000</field>
+                    <data>boundary : 77 : 1</data>
+                  </block>
+                </statement>
+                <statement name="has_a:state_space">
+                  <block type="state_space$i" id="218">
+                    <field name="name">Motions</field>
+                    <field name="#state">+</field>
+                    <statement name="has:state">
+                      <block type="state$s" id="219">
+                        <field name="name">Stop</field>
+                        <next>
+                          <block type="state$s" id="220">
+                            <field name="name">Sleep</field>
+                            <next>
+                              <block type="state$s" id="221">
+                                <field name="name">Forward</field>
+                                <next>
+                                  <block type="state$s" id="222">
+                                    <field name="name">Reverse</field>
+                                    <next>
+                                      <block type="state$s" id="223">
+                                        <field name="name">Left</field>
+                                        <next>
+                                          <block type="state$s" id="224">
+                                            <field name="name">Right</field>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <statement name="provides:service">
+                  <block type="service$s" id="228" collapsed="true">
+                    <field name="name">Slow Down When Detect any Obstacle </field>
+                    <field name="#state_variable">+</field>
+                    <next>
+                      <block type="service$s" id="229" collapsed="true">
+                        <field name="name">Change path when detect stationary thymio or wall</field>
+                        <field name="#state_variable">+</field>
+                        <next>
+                          <block type="service$s" id="230" collapsed="true">
+                            <field name="name">Stop when detect cylinders </field>
+                            <field name="#state_variable">+</field>
+                            <next>
+                              <block type="service$s" id="438" collapsed="true">
+                                <field name="name">Follow Thymio in front if it is not facing the same direction, and unfollow until the path separates. Stop when it stops and start when it restarts.</field>
+                                <field name="#state_variable">+</field>
+                                <next>
+                                  <block type="service$s" id="439" collapsed="true">
+                                    <field name="name">Stop and wait till cross the thymio in front if it has higher priority and facing opposite direction</field>
+                                    <field name="#state_variable">+</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="interacts_with:role_player">
+                  <block type="role_player$s" id="231">
+                    <field name="cardinality">1</field>
+                    <field name="name">Human Tap</field>
+                  </block>
+                </statement>
+                <statement name="is_composed_of:physical_system">
+                  <block type="controlled_object$s" id="232">
+                    <field name="cardinality">1</field>
+                    <field name="name">Proximity Sensor</field>
+                    <next>
+                      <block type="controlled_object$s" id="233">
+                        <field name="cardinality">2</field>
+                        <field name="name">Ground Sensor</field>
+                        <next>
+                          <block type="controlled_object$s" id="234">
+                            <field name="cardinality">3</field>
+                            <field name="name">Motors</field>
+                            <next>
+                              <block type="controlled_object$s" id="235">
+                                <field name="cardinality">4</field>
+                                <field name="name">Buttons</field>
+                                <next>
+                                  <block type="controlled_object$s" id="236">
+                                    <field name="cardinality">5</field>
+                                    <field name="name">LEDs</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="has:RUI">
+                  <block type="RUPI$s" id="832">
+                    <field name="name">Proximity Sensor</field>
+                    <field name="has_connection">FALSE</field>
+                    <field name="#connecting_strategy">+</field>
+                    <field name="#interface_specification">+</field>
+                    <field name="#interface_port">+</field>
+                    <field name="#afferent_environment">+</field>
+                    <field name="#efferent_environment">+</field>
+                    <field name="#interface_model">+</field>
+                    <field name="#thing">+</field>
+                    <field name="#environment">+</field>
+                    <field name="#RUPI">+</field>
+                    <field name="#probe">+</field>
+                    <field name="#security">+</field>
+                    <statement name="tranports:thing">
+                      <block type="__link" id="833">
+                        <field name="link_to">Thing / Walls</field>
+                        <data>thing : 1724 : 0</data>
+                        <next>
+                          <block type="__link" id="834">
+                            <field name="link_to">Thing / Cylinders</field>
+                            <data>thing : 1687 : 0</data>
+                            <next>
+                              <block type="__link" id="835">
+                                <field name="link_to">Thing / Moving Obstacle</field>
+                                <data>thing : 821 : 0</data>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="affects:environment">
+                      <block type="__link" id="836">
+                        <field name="link_to">Environment / Crossroad</field>
+                        <data>environment : 1683 : 0</data>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="RUPI$s" id="877">
+                        <field name="name">Ground Sensor</field>
+                        <field name="has_connection">FALSE</field>
+                        <field name="#connecting_strategy">+</field>
+                        <field name="#interface_specification">+</field>
+                        <field name="#interface_port">+</field>
+                        <field name="#afferent_environment">+</field>
+                        <field name="#efferent_environment">+</field>
+                        <field name="#interface_model">+</field>
+                        <field name="#thing">+</field>
+                        <field name="#environment">+</field>
+                        <field name="#RUPI">+</field>
+                        <field name="#probe">+</field>
+                        <field name="#security">+</field>
+                        <statement name="tranports:thing">
+                          <block type="__link" id="878">
+                            <field name="link_to">Thing / Road</field>
+                            <data>thing : 1447 : 0</data>
+                            <next>
+                              <block type="__link" id="879">
+                                <field name="link_to">Thing / Road Markings</field>
+                                <data>thing : 1726 : 0</data>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="affects:environment">
+                          <block type="__link" id="880">
+                            <field name="link_to">Environment / Crossroad</field>
+                            <data>environment : 1683 : 0</data>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="__link" id="517">
+                            <field name="link_to">RUMI / Asebq Switch</field>
+                            <data>RUMI : 473 : 0</data>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="shares:clock">
+                  <block type="physical_clock$s" id="478" collapsed="true">
+                    <field name="name">clock, whose resolution is the kilotick (1/32 of second)</field>
+                    <field name="tick">day</field>
+                    <field name="offset">day</field>
+                    <field name="frequency_offset">  ?  </field>
+                    <field name="stability">  ?  </field>
+                    <field name="wander">  ?  </field>
+                    <field name="jitter">  ?  </field>
+                    <field name="granularity">  ?  </field>
+                    <field name="#drift">+</field>
+                    <field name="#accuracy">+</field>
+                    <field name="#instant">+</field>
+                    <field name="#external_sync">+</field>
+                    <field name="#internal_sync">+</field>
+                    <field name="#oscillator">+</field>
+                    <next>
+                      <block type="__link" id="512">
+                        <field name="link_to">Reference clock / Must have a shared reference clock to synchronize the local clocks of all Thymios.</field>
+                        <data>reference_clock : 509 : 0</data>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="has:state_variable">
+                  <block type="state_variable$s" id="244" collapsed="true">
+                    <field name="name">Values of motors</field>
+                    <field name="value">  ?  </field>
+                    <field name="#state">+</field>
+                    <next>
+                      <block type="state_variable$s" id="245" collapsed="true">
+                        <field name="name">Timer</field>
+                        <field name="value">  ?  </field>
+                        <field name="#state">+</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="has:dynamicity">
+                  <block type="dynamic_interaction$s" id="247" collapsed="true">
+                    <field name="name">A thymio moving on the wrong path may be able to reroute on correct path</field>
+                    <field name="#interaction">+</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="CS$s" id="280">
+                    <field name="cardinality">4</field>
+                    <field name="name">T4</field>
+                    <field name="system_type">autonomous</field>
+                    <field name="#boundary">+</field>
+                    <field name="#state_space">+</field>
+                    <field name="#HMI">+</field>
+                    <field name="#CPS">+</field>
+                    <field name="#service">+</field>
+                    <field name="#role_player">+</field>
+                    <field name="#physical_system">+</field>
+                    <field name="#RUI">+</field>
+                    <field name="#dependability_guarantee">+</field>
+                    <field name="#fault_containment_region">+</field>
+                    <field name="#MAPE_algorithm">+</field>
+                    <field name="#security">+</field>
+                    <field name="#clock">+</field>
+                    <field name="#system_resource">+</field>
+                    <field name="#architectural_style">+</field>
+                    <field name="#subsystem">+</field>
+                    <field name="#state_variable">+</field>
+                    <field name="#interface">+</field>
+                    <field name="#dynamicity">+</field>
+                    <statement name="has_a:boundary">
+                      <block type="__link" id="420">
+                        <field name="link_to">Boundary / Proximity sensor value of 3000</field>
+                        <data>boundary : 77 : 1</data>
+                      </block>
+                    </statement>
+                    <statement name="has_a:state_space">
+                      <block type="state_space$i" id="282">
+                        <field name="name">Motions</field>
+                        <field name="#state">+</field>
+                        <statement name="has:state">
+                          <block type="state$s" id="283">
+                            <field name="name">Stop</field>
+                            <next>
+                              <block type="state$s" id="284">
+                                <field name="name">Sleep</field>
+                                <next>
+                                  <block type="state$s" id="285">
+                                    <field name="name">Forward</field>
+                                    <next>
+                                      <block type="state$s" id="286">
+                                        <field name="name">Reverse</field>
+                                        <next>
+                                          <block type="state$s" id="287">
+                                            <field name="name">Left</field>
+                                            <next>
+                                              <block type="state$s" id="288">
+                                                <field name="name">Right</field>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <statement name="provides:service">
+                      <block type="service$s" id="292" collapsed="true">
+                        <field name="name">Slow Down When Detect any Obstacle </field>
+                        <field name="#state_variable">+</field>
+                        <next>
+                          <block type="service$s" id="293" collapsed="true">
+                            <field name="name">Change path when detect stationary thymio or wall</field>
+                            <field name="#state_variable">+</field>
+                            <next>
+                              <block type="service$s" id="294" collapsed="true">
+                                <field name="name">Stop when detect cylinders </field>
+                                <field name="#state_variable">+</field>
+                                <next>
+                                  <block type="service$s" id="443" collapsed="true">
+                                    <field name="name">Follow Thymio in front if it is not facing the same direction, and unfollow until the path separates. Stop when it stops and start when it restarts.</field>
+                                    <field name="#state_variable">+</field>
+                                    <next>
+                                      <block type="service$s" id="444" collapsed="true">
+                                        <field name="name">Stop and wait till cross the thymio in front if it has higher priority and facing opposite direction</field>
+                                        <field name="#state_variable">+</field>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="interacts_with:role_player">
+                      <block type="role_player$s" id="295">
+                        <field name="cardinality">1</field>
+                        <field name="name">Human Tap</field>
+                      </block>
+                    </statement>
+                    <statement name="is_composed_of:physical_system">
+                      <block type="controlled_object$s" id="296">
+                        <field name="cardinality">1</field>
+                        <field name="name">Proximity Sensor</field>
+                        <next>
+                          <block type="controlled_object$s" id="297">
+                            <field name="cardinality">2</field>
+                            <field name="name">Ground Sensor</field>
+                            <next>
+                              <block type="controlled_object$s" id="298">
+                                <field name="cardinality">3</field>
+                                <field name="name">Motors</field>
+                                <next>
+                                  <block type="controlled_object$s" id="299">
+                                    <field name="cardinality">4</field>
+                                    <field name="name">Buttons</field>
+                                    <next>
+                                      <block type="controlled_object$s" id="300">
+                                        <field name="cardinality">5</field>
+                                        <field name="name">LEDs</field>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="has:RUI">
+                      <block type="RUPI$s" id="886">
+                        <field name="name">Proximity Sensor</field>
+                        <field name="has_connection">FALSE</field>
+                        <field name="#connecting_strategy">+</field>
+                        <field name="#interface_specification">+</field>
+                        <field name="#interface_port">+</field>
+                        <field name="#afferent_environment">+</field>
+                        <field name="#efferent_environment">+</field>
+                        <field name="#interface_model">+</field>
+                        <field name="#thing">+</field>
+                        <field name="#environment">+</field>
+                        <field name="#RUPI">+</field>
+                        <field name="#probe">+</field>
+                        <field name="#security">+</field>
+                        <statement name="tranports:thing">
+                          <block type="__link" id="887">
+                            <field name="link_to">Thing / Walls</field>
+                            <data>thing : 1724 : 0</data>
+                            <next>
+                              <block type="__link" id="888">
+                                <field name="link_to">Thing / Cylinders</field>
+                                <data>thing : 1687 : 0</data>
+                                <next>
+                                  <block type="__link" id="889">
+                                    <field name="link_to">Thing / Moving Obstacle</field>
+                                    <data>thing : 821 : 0</data>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="affects:environment">
+                          <block type="__link" id="890">
+                            <field name="link_to">Environment / Crossroad</field>
+                            <data>environment : 1683 : 0</data>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="RUPI$s" id="895">
+                            <field name="name">Ground Sensor</field>
+                            <field name="has_connection">FALSE</field>
+                            <field name="#connecting_strategy">+</field>
+                            <field name="#interface_specification">+</field>
+                            <field name="#interface_port">+</field>
+                            <field name="#afferent_environment">+</field>
+                            <field name="#efferent_environment">+</field>
+                            <field name="#interface_model">+</field>
+                            <field name="#thing">+</field>
+                            <field name="#environment">+</field>
+                            <field name="#RUPI">+</field>
+                            <field name="#probe">+</field>
+                            <field name="#security">+</field>
+                            <statement name="tranports:thing">
+                              <block type="__link" id="896">
+                                <field name="link_to">Thing / Road</field>
+                                <data>thing : 1447 : 0</data>
+                                <next>
+                                  <block type="__link" id="897">
+                                    <field name="link_to">Thing / Road Markings</field>
+                                    <data>thing : 1726 : 0</data>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <statement name="affects:environment">
+                              <block type="__link" id="898">
+                                <field name="link_to">Environment / Crossroad</field>
+                                <data>environment : 1683 : 0</data>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="__link" id="516">
+                                <field name="link_to">RUMI / Asebq Switch</field>
+                                <data>RUMI : 473 : 0</data>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="shares:clock">
+                      <block type="physical_clock$s" id="479" collapsed="true">
+                        <field name="name">clock, whose resolution is the kilotick (1/32 of second)</field>
+                        <field name="tick">day</field>
+                        <field name="offset">day</field>
+                        <field name="frequency_offset">  ?  </field>
+                        <field name="stability">  ?  </field>
+                        <field name="wander">  ?  </field>
+                        <field name="jitter">  ?  </field>
+                        <field name="granularity">  ?  </field>
+                        <field name="#drift">+</field>
+                        <field name="#accuracy">+</field>
+                        <field name="#instant">+</field>
+                        <field name="#external_sync">+</field>
+                        <field name="#internal_sync">+</field>
+                        <field name="#oscillator">+</field>
+                        <next>
+                          <block type="__link" id="513">
+                            <field name="link_to">Reference clock / Must have a shared reference clock to synchronize the local clocks of all Thymios.</field>
+                            <data>reference_clock : 509 : 0</data>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="has:state_variable">
+                      <block type="state_variable$s" id="308" collapsed="true">
+                        <field name="name">Values of motors</field>
+                        <field name="value">  ?  </field>
+                        <field name="#state">+</field>
+                        <next>
+                          <block type="state_variable$s" id="309" collapsed="true">
+                            <field name="name">Timer</field>
+                            <field name="value">  ?  </field>
+                            <field name="#state">+</field>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="has:dynamicity">
+                      <block type="dynamic_interaction$s" id="311" collapsed="true">
+                        <field name="name">A thymio moving on the wrong path may be able to reroute on correct path</field>
+                        <field name="#interaction">+</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="CS$s" id="344">
+                        <field name="cardinality">5</field>
+                        <field name="name">T5</field>
+                        <field name="system_type">autonomous</field>
+                        <field name="#boundary">+</field>
+                        <field name="#state_space">+</field>
+                        <field name="#HMI">+</field>
+                        <field name="#CPS">+</field>
+                        <field name="#service">+</field>
+                        <field name="#role_player">+</field>
+                        <field name="#physical_system">+</field>
+                        <field name="#RUI">+</field>
+                        <field name="#dependability_guarantee">+</field>
+                        <field name="#fault_containment_region">+</field>
+                        <field name="#MAPE_algorithm">+</field>
+                        <field name="#security">+</field>
+                        <field name="#clock">+</field>
+                        <field name="#system_resource">+</field>
+                        <field name="#architectural_style">+</field>
+                        <field name="#subsystem">+</field>
+                        <field name="#state_variable">+</field>
+                        <field name="#interface">+</field>
+                        <field name="#dynamicity">+</field>
+                        <statement name="has_a:boundary">
+                          <block type="__link" id="421">
+                            <field name="link_to">Boundary / Proximity sensor value of 3000</field>
+                            <data>boundary : 77 : 1</data>
+                          </block>
+                        </statement>
+                        <statement name="has_a:state_space">
+                          <block type="state_space$i" id="346">
+                            <field name="name">Motions</field>
+                            <field name="#state">+</field>
+                            <statement name="has:state">
+                              <block type="state$s" id="347">
+                                <field name="name">Stop</field>
+                                <next>
+                                  <block type="state$s" id="348">
+                                    <field name="name">Sleep</field>
+                                    <next>
+                                      <block type="state$s" id="349">
+                                        <field name="name">Forward</field>
+                                        <next>
+                                          <block type="state$s" id="350">
+                                            <field name="name">Reverse</field>
+                                            <next>
+                                              <block type="state$s" id="351">
+                                                <field name="name">Left</field>
+                                                <next>
+                                                  <block type="state$s" id="352">
+                                                    <field name="name">Right</field>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                        <statement name="provides:service">
+                          <block type="service$s" id="356" collapsed="true">
+                            <field name="name">Slow Down When Detect any Obstacle </field>
+                            <field name="#state_variable">+</field>
+                            <next>
+                              <block type="service$s" id="357" collapsed="true">
+                                <field name="name">Change path when detect stationary thymio or wall</field>
+                                <field name="#state_variable">+</field>
+                                <next>
+                                  <block type="service$s" id="358" collapsed="true">
+                                    <field name="name">Stop when detect cylinders </field>
+                                    <field name="#state_variable">+</field>
+                                    <next>
+                                      <block type="service$s" id="446" collapsed="true">
+                                        <field name="name">Follow Thymio in front if it is not facing the same direction, and unfollow until the path separates. Stop when it stops and start when it restarts.</field>
+                                        <field name="#state_variable">+</field>
+                                        <next>
+                                          <block type="service$s" id="447" collapsed="true">
+                                            <field name="name">Stop and wait till cross the thymio in front if it has higher priority and facing opposite direction</field>
+                                            <field name="#state_variable">+</field>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="interacts_with:role_player">
+                          <block type="role_player$s" id="359">
+                            <field name="cardinality">1</field>
+                            <field name="name">Human Tap</field>
+                          </block>
+                        </statement>
+                        <statement name="is_composed_of:physical_system">
+                          <block type="controlled_object$s" id="360">
+                            <field name="cardinality">1</field>
+                            <field name="name">Proximity Sensor</field>
+                            <next>
+                              <block type="controlled_object$s" id="361">
+                                <field name="cardinality">2</field>
+                                <field name="name">Ground Sensor</field>
+                                <next>
+                                  <block type="controlled_object$s" id="362">
+                                    <field name="cardinality">3</field>
+                                    <field name="name">Motors</field>
+                                    <next>
+                                      <block type="controlled_object$s" id="363">
+                                        <field name="cardinality">4</field>
+                                        <field name="name">Buttons</field>
+                                        <next>
+                                          <block type="controlled_object$s" id="364">
+                                            <field name="cardinality">5</field>
+                                            <field name="name">LEDs</field>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="has:RUI">
+                          <block type="RUPI$s" id="868">
+                            <field name="name">Proximity Sensor</field>
+                            <field name="has_connection">FALSE</field>
+                            <field name="#connecting_strategy">+</field>
+                            <field name="#interface_specification">+</field>
+                            <field name="#interface_port">+</field>
+                            <field name="#afferent_environment">+</field>
+                            <field name="#efferent_environment">+</field>
+                            <field name="#interface_model">+</field>
+                            <field name="#thing">+</field>
+                            <field name="#environment">+</field>
+                            <field name="#RUPI">+</field>
+                            <field name="#probe">+</field>
+                            <field name="#security">+</field>
+                            <statement name="tranports:thing">
+                              <block type="__link" id="869">
+                                <field name="link_to">Thing / Walls</field>
+                                <data>thing : 1724 : 0</data>
+                                <next>
+                                  <block type="__link" id="870">
+                                    <field name="link_to">Thing / Cylinders</field>
+                                    <data>thing : 1687 : 0</data>
+                                    <next>
+                                      <block type="__link" id="871">
+                                        <field name="link_to">Thing / Moving Obstacle</field>
+                                        <data>thing : 821 : 0</data>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <statement name="affects:environment">
+                              <block type="__link" id="872">
+                                <field name="link_to">Environment / Crossroad</field>
+                                <data>environment : 1683 : 0</data>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="RUPI$s" id="841">
+                                <field name="name">Ground Sensor</field>
+                                <field name="has_connection">FALSE</field>
+                                <field name="#connecting_strategy">+</field>
+                                <field name="#interface_specification">+</field>
+                                <field name="#interface_port">+</field>
+                                <field name="#afferent_environment">+</field>
+                                <field name="#efferent_environment">+</field>
+                                <field name="#interface_model">+</field>
+                                <field name="#thing">+</field>
+                                <field name="#environment">+</field>
+                                <field name="#RUPI">+</field>
+                                <field name="#probe">+</field>
+                                <field name="#security">+</field>
+                                <statement name="tranports:thing">
+                                  <block type="__link" id="842">
+                                    <field name="link_to">Thing / Road</field>
+                                    <data>thing : 1447 : 0</data>
+                                    <next>
+                                      <block type="__link" id="843">
+                                        <field name="link_to">Thing / Road Markings</field>
+                                        <data>thing : 1726 : 0</data>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <statement name="affects:environment">
+                                  <block type="__link" id="844">
+                                    <field name="link_to">Environment / Crossroad</field>
+                                    <data>environment : 1683 : 0</data>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="__link" id="515">
+                                    <field name="link_to">RUMI / Asebq Switch</field>
+                                    <data>RUMI : 473 : 0</data>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="shares:clock">
+                          <block type="physical_clock$s" id="480" collapsed="true">
+                            <field name="name">clock, whose resolution is the kilotick (1/32 of second)</field>
+                            <field name="tick">day</field>
+                            <field name="offset">day</field>
+                            <field name="frequency_offset">  ?  </field>
+                            <field name="stability">  ?  </field>
+                            <field name="wander">  ?  </field>
+                            <field name="jitter">  ?  </field>
+                            <field name="granularity">  ?  </field>
+                            <field name="#drift">+</field>
+                            <field name="#accuracy">+</field>
+                            <field name="#instant">+</field>
+                            <field name="#external_sync">+</field>
+                            <field name="#internal_sync">+</field>
+                            <field name="#oscillator">+</field>
+                            <next>
+                              <block type="__link" id="514">
+                                <field name="link_to">Reference clock / Must have a shared reference clock to synchronize the local clocks of all Thymios.</field>
+                                <data>reference_clock : 509 : 0</data>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="has:state_variable">
+                          <block type="state_variable$s" id="372" collapsed="true">
+                            <field name="name">Values of motors</field>
+                            <field name="value">  ?  </field>
+                            <field name="#state">+</field>
+                            <next>
+                              <block type="state_variable$s" id="373" collapsed="true">
+                                <field name="name">Timer</field>
+                                <field name="value">  ?  </field>
+                                <field name="#state">+</field>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="has:dynamicity">
+                          <block type="dynamic_interaction$s" id="375" collapsed="true">
+                            <field name="name">A thymio moving on the wrong path may be able to reroute on correct path</field>
+                            <field name="#interaction">+</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="boundary$i" id="77" x="-2601" y="-3078">
+    <field name="name">Proximity sensor value of 3000</field>
+  </block>
+  <block type="reference_clock$s" id="509" collapsed="true" x="-2604" y="-3003">
+    <field name="name">Must have a shared reference clock to synchronize the local clocks of all Thymios.</field>
+    <field name="tick">s</field>
+    <field name="offset">s</field>
+    <field name="frequency_offset">  ?  </field>
+    <field name="stability">  ?  </field>
+    <field name="wander">  ?  </field>
+    <field name="jitter">  ?  </field>
+    <field name="granularity">  ?  </field>
+    <field name="#accuracy">+</field>
+    <field name="#instant">+</field>
+    <field name="#external_sync">+</field>
+    <field name="#internal_sync">+</field>
+    <field name="#oscillator">+</field>
+  </block>
+  <block type="RUMI$s" id="473" x="-2600" y="-2937">
+    <field name="name">Asebq Switch</field>
+    <field name="has_connection">TRUE</field>
+    <field name="#connecting_strategy">+</field>
+    <field name="#interface_specification">+</field>
+    <field name="#interface_port">+</field>
+    <field name="#afferent_environment">+</field>
+    <field name="#efferent_environment">+</field>
+    <field name="#interface_model">+</field>
+    <field name="#service">+</field>
+    <field name="#message">+</field>
+    <field name="#RUMI">+</field>
+    <field name="#probe">+</field>
+    <field name="#security">+</field>
+    <statement name="exchanges:message">
+      <block type="message$s" id="474" collapsed="true">
+        <field name="name">Share priority with other CS</field>
+        <field name="transport_type">PAR_message</field>
+        <field name="header">  ?  </field>
+        <field name="data_field">  ?  </field>
+        <field name="#message_classification">+</field>
+        <field name="#trailer">+</field>
+      </block>
+    </statement>
+    <statement name="satisfies_the_condition_of:security">
+      <block type="security$s" id="475" collapsed="true">
+        <field name="name">Encryption over network</field>
+        <field name="#cryptography">+</field>
+      </block>
+    </statement>
+  </block>
+</xml>

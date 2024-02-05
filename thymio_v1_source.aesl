@@ -1,0 +1,116 @@
+<!DOCTYPE aesl-source>
+<network>
+
+
+<!--list of global events-->
+<event size="1" name="pair_run"/>
+<constant value="1" name="priority"/>
+
+
+<!--node T1 on Muhammads-MacBook-Pro.local - 3296-->
+<node nodeId="{5d903368-ac1c-43e3-816d-c05231e10ae1}" name="T1 on Muhammads-MacBook-Pro.local - 3296"><![CDATA[var state = 0
+var motorSpeed = 250
+var reverseMotorSpeed = -100
+var onTap = 0
+var reverseCounter = 7
+var myPriority = priority
+var reverseSpeed = -100
+var eventTriggered = 0
+
+call sound.system(-1)
+call leds.top(0,0,0)
+call leds.bottom.left(0,0,0)
+call leds.bottom.right(0,0,0)
+call leds.circle(0,0,0,0,0,0,0,0)
+onevent tap
+		motor.left.target = motorSpeed
+		motor.right.target = motorSpeed
+		call leds.top(0,32,0)
+		onTap=1
+		state = 1
+onevent prox
+	when (prox.ground.delta[0] <= 400 and prox.ground.delta[1] <= 400)and onTap==1 do
+		motor.left.target = 250
+		motor.right.target = 250
+		call leds.top(0,32,0)
+	end
+	when (prox.ground.delta[0] >= 450 and prox.ground.delta[1] <= 400)and onTap==1 do
+		motor.left.target = 100
+		motor.right.target = -200
+		call leds.top(32,32,0)
+	end
+	when (prox.ground.delta[0] <= 400 and prox.ground.delta[1] >= 450 )and onTap==1 do
+		motor.left.target = -200
+		motor.right.target = 100
+		call leds.top(32,32,0)
+	end
+	when (prox.ground.delta[0] >= 450 and prox.ground.delta[1] >= 450)and onTap==1 do
+		motor.left.target = 0
+		motor.right.target = 0
+		call leds.top(32,0,0)
+	end
+	
+	when  (prox.horizontal[0]>2000 or prox.horizontal[1]>2000) and  (prox.horizontal[3]>2000 or prox.horizontal[4]>2000)do
+		motor.right.target= 0
+		motor.left.target= 0
+		onTap=0
+		call leds.top(20,20,20)
+	end
+	
+	when 
+	(prox.horizontal[0]>0 or prox.horizontal[1]>0 or prox.horizontal[2]>0 or
+	prox.horizontal[3]>0 or prox.horizontal[4]>0 ) and eventTriggered == 0
+	  do
+		if myPriority==0 then
+		motor.right.target= 0
+			motor.left.target= 0
+			timer.period[0]=7000
+		# 2 reverse 
+	elseif myPriority==1 then
+			if reverseCounter >0 then
+				if reverseCounter ==2 then
+					reverseMotorSpeed =  -50
+				elseif  reverseCounter == 1 then
+					reverseMotorSpeed= -25
+				end
+				motor.right.target= reverseMotorSpeed
+				motor.left.target= reverseMotorSpeed
+				state=0
+				emit pair_run reverseCounter
+				reverseCounter--
+				eventTriggered= 1
+				timer.period[0]=5000
+			else
+				myPriority=2
+			end
+	end
+	
+	end
+	
+onevent timer0
+	if state==0 then
+				motor.right.target= 0
+				motor.left.target= 0
+				timer.period[0]=0
+				emit pair_run 100
+				state =1
+				onTap=0				
+				if  reverseCounter==2 then
+					timer.period[0]=3000
+				elseif  reverseCounter==1 then
+					timer.period[0]=2500
+				end
+				timer.period[0]=5000
+	elseif state == 1 then
+				onTap=1
+				motor.right.target= motorSpeed
+				motor.left.target= motorSpeed
+				emit pair_run 200
+				eventTriggered= 0
+				timer.period[0]=0
+	end
+			
+]]></node>
+
+
+</network>
