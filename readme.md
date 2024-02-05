@@ -21,13 +21,13 @@ The Software Requirements Specification (SRS) outlines the product, Thymio Plato
 - **Stop At Destination**: Thymio robots must recognize when they reach their destination and cease movement.
 - **Emergency Response**: The system can detect and alert other robots of emergency situations, enhancing safety.
 
-<image>
+![image1](https://github.com/MeIbtihajnaeem/Thymio-Platooning-and-GiveAway/assets/55640263/0032a689-2ee1-45a1-b3c1-23960847b61e)
+
 
 ## Requirements
 ### Use Case Diagram
 
-<image>
-
+![image2](https://github.com/MeIbtihajnaeem/Thymio-Platooning-and-GiveAway/assets/55640263/175ec668-b3a0-461a-b318-f835639e5c3b)
 
 # Thymio Robot System README
 
